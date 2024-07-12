@@ -55,8 +55,7 @@ redef record connection += {
 };
 
 function set_session(c: connection, db: string): Info {
-	if ( ! c?$database_info )
-		{
+	if ( ! c?$database_info ) {
 		c$database_info = [
 			$ts=network_time(),
 			$uid=c$uid,
@@ -64,7 +63,7 @@ function set_session(c: connection, db: string): Info {
 			$db=db,
 		];
 		Conn::register_removal_hook(c, finalize_database);
-		}
+	}
 
 	return c$database_info;
 }
