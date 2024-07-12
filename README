@@ -1,4 +1,13 @@
-mysql-auth
+zeek-database-log
 =================================
 
-TODO: tell people what your package does!
+Log information about database connections including version and authentication information.
+
+For now this only includes MySQL, but could be extended for PostgreSQL, too.
+
+
+    zkg install https://github.com/awelzel/zeek-database-log
+
+
+NOTE: This package requires a custom Zeek version. It does currently not
+      work with Zeek 7.0 or before!
